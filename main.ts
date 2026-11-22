@@ -1,6 +1,8 @@
 import { mkdirSync, writeFileSync } from "node:fs";
+import { join } from "node:path";
 
-const PLAN = "Day 1: spend $70 on API credits and $30 on a BuiltWith list of 500 Shopify stores. Build each a demo AI chatbot from its FAQ, email 50 owners daily offering it live for $199. Deliver in 24h, upsell $49/mo hosting. Close 3-5 sales in 30 days: $600-$1,000, no ads, no trading.";
+const plan =
+  "Sell AI receptionists to dental clinics: build a booking bot from each clinic's own site before asking for money, $149 setup plus $49/month. Find owners on Google Maps, send a live demo link. Day one: list 50 clinics, build 5 demos. Spend $60 on APIs, $40 on email and a domain.";
 
 mkdirSync("/output", { recursive: true });
-writeFileSync("/output/entry.txt", PLAN, "utf8");
+writeFileSync(join("/output", "entry.txt"), plan, "utf8");
